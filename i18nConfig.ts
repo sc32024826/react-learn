@@ -1,12 +1,12 @@
 interface config {
-  prefixDefault? : string;
-  locales? : string[];
-  defaultLocale? : string;
+  prefixDefault? : boolean;
+  locales: string[];
+  defaultLocale : string;
   localeDetection? : boolean;
 }
 
 export const i18nConfig: config = {
-  locales: ["en", "zh"],
-  defaultLocale: "zh",
+  locales: ["en", "zh-CN"],
+  defaultLocale: "zh-CN",
   localeDetection: false,
 };

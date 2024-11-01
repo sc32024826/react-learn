@@ -40,7 +40,7 @@ export default function LanguageSwitcher() {
   return (
     <select onChange={handleChange} value={currentLocale}>
       <option value="en">English</option>
-      <option value="zh">Chinese</option>
+      <option value="zh-CN">Chinese</option>
     </select>
   );
 }
