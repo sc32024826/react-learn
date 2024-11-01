@@ -1,7 +1,13 @@
 import Image from "next/image";
 import initTranslations from "../i18n";
 
-export default async function Home({ params: {lang} }: { params: { lang: string } }) {
+export default async function Home(props: { params: Promise<{ lang: string }> }) {
+  const params = await props.params;
+
+  const {
+    lang
+  } = params;
+
   const { t } = await initTranslations(lang, ['home']);
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
