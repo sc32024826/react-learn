@@ -1,5 +1,6 @@
 import Image from "next/image";
 import initTranslations from "../i18n";
+import LanguageSwitcher from '@/components/LanguageSwitcher';
 
 export default async function Home(props: { params: Promise<{ lang: string }> }) {
   const params = await props.params;
@@ -55,6 +56,9 @@ export default async function Home(props: { params: Promise<{ lang: string }> })
           >
             {t('read')}
           </a>
+        </div>
+        <div className="mx-auto">
+          <LanguageSwitcher />
         </div>
       </main>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
